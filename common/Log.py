@@ -20,6 +20,7 @@ class Logger(object):
         self.formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
     def get_logger(self):
+
         """在logger中添加日志句柄并返回，如果logger已有句柄，则直接返回"""
         if not self.logger.handlers:  # 避免重复日志
             console_handler = logging.StreamHandler()
